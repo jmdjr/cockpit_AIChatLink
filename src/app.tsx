@@ -25,9 +25,8 @@ export const Application = () => {
                 style={{ width: '100%', height: '100%', border: 'none' }}
                 title="AI Chat"
                 sandbox='allow-forms allow-scripts allow-same-origin'>
-                    Failed to open Web GUI
-                    <a href={iframeSrc} target="_blank" rel="noopener noreferrer">Open AI Chat in new tab</a>
                 </iframe>
+            <a href={iframeSrc} target="_blank">Open WebUI</a>
         </div>
     );
 };
