@@ -16,7 +16,6 @@ export const Application = () => {
     const domain = window.location.hostname;
     const targetPort = "3000";
     const iframeSrc = `http://${domain}:${targetPort}`;
-    const iframeSrcSecure = `https://${domain}:${targetPort}`;
     const iframeId = "ai-chat-iframe";
     return (
         <div style={{ height: '100vh', width: '100%'}}>
@@ -25,7 +24,8 @@ export const Application = () => {
                 src={iframeSrc}
                 style={{ width: '100%', height: '100%', border: 'none' }}
                 title="AI Chat"
-                sandbox='allow-forms allow-scripts allow-same-origin'><a href={iframeSrc} target="_blank" rel="noopener noreferrer">Open AI Chat in new tab</a>
+                sandbox='allow-forms allow-scripts allow-same-origin'>
+                    <a href={iframeSrc} target="_blank" rel="noopener noreferrer">Open AI Chat in new tab</a>
                 </iframe>
         </div>
     );
