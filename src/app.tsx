@@ -15,7 +15,7 @@ const _ = cockpit.gettext;
 export const Application = () => {
     const domain = window.location.hostname;
     const targetPort = "3000";
-    const iframeSrc = `https://${domain}:${targetPort}`;
+    const iframeSrc = `http://${domain}:${targetPort}`;
 
     return (
         <div style={{ height: '100vh', width: '100%'}}>
