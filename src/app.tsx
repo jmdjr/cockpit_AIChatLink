@@ -22,7 +22,7 @@ export const Application = () => {
         <div style={{ height: '100vh', width: '100%'}}>
             <iframe 
                 id={iframeId}
-                src={iframeSrc}
+                src={iframeSrcSecure}
                 style={{ width: '100%', height: '100%', border: 'none' }}
                 title="AI Chat"
                 sandbox='allow-forms allow-scripts allow-same-origin'>Something happened. probably COORS issue...</iframe>
@@ -32,12 +32,8 @@ export const Application = () => {
                         setTimeout(() => {
                             const iframe = document.getElementById(iframeId) as HTMLIFrameElement;
                             if (iframe) {
-                                iframe.src = iframeSrcSecure;
-                                setTimeout(() => {
-                                    iframe.src = iframeSrc;
-                                }, 1000);
+                                iframe.src = iframeSrc;
                             }
-                           
                         }, 1000)
                     })()
                 </script>
