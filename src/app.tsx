@@ -16,6 +16,7 @@ export const Application = () => {
     const domain = window.location.hostname;
     const targetPort = "3000";
     const iframeSrc = `http://${domain}:${targetPort}`;
+    const iframeSrcSecure = `https://${domain}:${targetPort}`;
     const iframeId = "ai-chat-iframe";
     return (
         <div style={{ height: '100vh', width: '100%'}}>
@@ -31,9 +32,13 @@ export const Application = () => {
                         setTimeout(() => {
                             const iframe = document.getElementById(iframeId) as HTMLIFrameElement;
                             if (iframe) {
-                                iframe.src = iframeSrc;
+                                iframe.src = iframeSrcSecure;
+                                setTimeout(() => {
+                                    iframe.src = iframeSrc;
+                                }, 1000);
                             }
-                        }, 100)
+                           
+                        }, 1000)
                     })()
                 </script>
         </div>
