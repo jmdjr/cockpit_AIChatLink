@@ -19,14 +19,14 @@ export const Application = () => {
     const iframeId = "ai-chat-iframe";
     return (
         <div style={{ height: '100vh', width: '100%'}}>
+            <a href={iframeSrc} target="_blank">Open WebUI</a>
             <iframe 
                 id={iframeId}
                 src={iframeSrc}
-                style={{ width: '100%', height: '100%', border: 'none' }}
+                style={{ width: '100%', height: '90%', border: 'none' }}
                 title="AI Chat"
                 sandbox='allow-forms allow-scripts allow-same-origin'>
                 </iframe>
-            <a href={iframeSrc} target="_blank">Open WebUI</a>
         </div>
     );
 };
