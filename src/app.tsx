@@ -13,20 +13,17 @@ import cockpit from 'cockpit';
 const _ = cockpit.gettext;
 
 export const Application = () => {
-    const [hostname, setHostname] = useState(_("Unknown"));
-
-    useEffect(() => {
-        const hostname = cockpit.file('/etc/hostname');
-        hostname.watch(content => setHostname(content?.trim() ?? ""));
-        return hostname.close;
-    }, []);
+    const domain = window.location.hostname;
+    const targetPort = "3000";
+    const iframeSrc = `https://${domain}:${targetPort}`;
 
     return (
         <div style={{ height: '100vh', width: '100%'}}>
             <iframe 
-                src="https://cybrina.duckdns.org:3000"
+                src={iframeSrc}
                 style={{ width: '100%', height: '100%', border: 'none' }}
-                title="AI Chat"></iframe>
+                title="AI Chat"
+                sandbox='allow-forms allow-scripts allow-same-origin'>Something happened. probably COORS issue...</iframe>
         </div>
     );
 };
