@@ -23,8 +23,9 @@ export const Application = () => {
 
     return (
         <Card>
-            <CardTitle>Starter Kit</CardTitle>
+            <CardTitle>Temporary</CardTitle>
             <CardBody>
+	    I am just experimenting here, don't have intellisense with VIM and the VSCode is buggy. Might have updates.
                 <Alert
                     variant="info"
                     title={ cockpit.format(_("Running on $0"), hostname) }
