@@ -22,21 +22,11 @@ export const Application = () => {
         <div style={{ height: '100vh', width: '100%'}}>
             <iframe 
                 id={iframeId}
-                src={iframeSrcSecure}
+                src={iframeSrc}
                 style={{ width: '100%', height: '100%', border: 'none' }}
                 title="AI Chat"
-                sandbox='allow-forms allow-scripts allow-same-origin'>Something happened. probably COORS issue...</iframe>
-                <script>
-                    (function ()
-                    {
-                        setTimeout(() => {
-                            const iframe = document.getElementById(iframeId) as HTMLIFrameElement;
-                            if (iframe) {
-                                iframe.src = iframeSrc;
-                            }
-                        }, 1000)
-                    })()
-                </script>
+                sandbox='allow-forms allow-scripts allow-same-origin'><a href={iframeSrc} target="_blank" rel="noopener noreferrer">Open AI Chat in new tab</a>
+                </iframe>
         </div>
     );
 };
