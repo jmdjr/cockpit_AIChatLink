@@ -22,15 +22,11 @@ export const Application = () => {
     }, []);
 
     return (
-        <Card>
-            <CardTitle>Temporary</CardTitle>
-            <CardBody>
-	    I am just experimenting here, don't have intellisense with VIM and the VSCode is buggy. Might have updates.
-                <Alert
-                    variant="info"
-                    title={ cockpit.format(_("Running on $0"), hostname) }
-                />
-            </CardBody>
-        </Card>
+        <div style={{ height: '100vh', width: '100%'}}>
+            <iframe 
+                src="https://cybrina.duckdns.org:3000"
+                style={{ width: '100%', height: '100%', border: 'none' }}
+                title="AI Chat"></iframe>
+        </div>
     );
 };
