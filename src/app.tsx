@@ -13,7 +13,7 @@ import cockpit from 'cockpit';
 const _ = cockpit.gettext;
 
 export const Application = () => {
-    const iframeSrc = "http://cybrina-webui.duckdns.org/";
+    const iframeSrc = "https://cybrina-webui.duckdns.org/";
     const iframeId = "ai-chat-iframe";
     return (
         <div style={{ height: '100vh', width: '100%'}}>
