@@ -13,19 +13,17 @@ import cockpit from 'cockpit';
 const _ = cockpit.gettext;
 
 export const Application = () => {
-    const domain = window.location.hostname;
-    const targetPort = "3000";
-    const iframeSrc = `http://${domain}:${targetPort}`;
+    const iframeSrc = "http://100.127.119.118:3000";
     const iframeId = "ai-chat-iframe";
     return (
         <div style={{ height: '100vh', width: '100%'}}>
-            <a href={iframeSrc} target="_blank">Open WebUI</a>
             <iframe 
                 id={iframeId}
                 src={iframeSrc}
-                style={{ width: '100%', height: '90%', border: 'none' }}
+                style={{ width: '100%', height: '100%', border: 'none' }}
                 title="AI Chat"
-                sandbox='allow-forms allow-scripts allow-same-origin'>
+                sandbox="allow-forms allow-scripts allow-same-origin allow-popups allow-modals allow-downloads">
+                    <a href={iframeSrc} target="_blank">Open WebUI</a>
                 </iframe>
         </div>
     );
